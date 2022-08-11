@@ -43,7 +43,7 @@
         android:id="@+id/tvEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/labelPhone"
+        android:text="@string/labelEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPhone"
         android:labelFor="@id/etEmail"/>
@@ -54,6 +54,15 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <CheckBox
+        android:id="@+id/cbEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelCheckbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

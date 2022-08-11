@@ -2,4 +2,7 @@
     <string name="app_name">Cadastro</string>
     <string name="labelName">Nome</string>
     <string name="labelPhone">Telefone</string>
+    <string name="labelEmail">Email</string>
+    <string name="labelCheckbox">Ingressar na lista de email?</string>
+
 </resources>
