@@ -36,6 +36,7 @@
         android:id="@+id/etPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="phone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPhone" />
 
@@ -64,21 +65,21 @@
         app:layout_constraintTop_toBottomOf="@id/etEmail"/>
 
     <TextView
-        android:id="@+id/tvSex"
+        android:id="@+id/tvGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/labelSexRadioGroup"
+        android:text="@string/labelGenderRadioGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cbEmail"
         android:labelFor="@id/etEmail"/>
 
     <RadioGroup
-        android:id="@+id/rgSex"
+        android:id="@+id/rgGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSex">
+        app:layout_constraintTop_toBottomOf="@id/tvGender">
 
         <RadioButton
             android:id="@+id/rbMale"
@@ -99,7 +100,7 @@
         android:layout_height="wrap_content"
         android:text="@string/labelCity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rgSex"
+        app:layout_constraintTop_toBottomOf="@id/rgGender"
         android:labelFor="@id/etName"/>
 
     <EditText
@@ -118,9 +119,10 @@
         app:layout_constraintTop_toBottomOf="@id/etCity"
         android:labelFor="@id/etName"/>
     <Spinner
-        android:id="@+id/spUF"
+        android:id="@+id/spState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:entries="@array/SpinnerUFContent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvLabelSpinnerUF" />
    <LinearLayout
@@ -130,7 +132,7 @@
        android:orientation="horizontal"
        android:gravity="center"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/spUF">
+       app:layout_constraintTop_toBottomOf="@id/spState">
        <Button
            android:id="@+id/btSave"
            android:text="@string/labelSaveBtn"
