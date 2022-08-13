@@ -1,7 +1,9 @@
 package ads.pdm.cadastro;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -30,24 +32,31 @@ public class MainActivity extends AppCompatActivity {
         amb.etEmail.getText().clear();
         amb.cbEmail.setChecked(false);
         amb.rbFemale.setChecked(false);
-        amb.rbMale.setChecked(false);
+        amb.rbMale.setChecked(true);
         amb.etCity.getText().clear();
         amb.spState.setSelection(0);
     }
 
+
+    @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         amb = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(amb.getRoot());
-
+        amb.rbMale.setChecked(true);
         amb.btSave.setOnClickListener(view -> {
             FormData formData = getFormData();
-            Toast.makeText(getApplicationContext(),
+            Toast toast =  Toast.makeText(getApplicationContext(),
                     formData.toString(),
-                    Toast.LENGTH_LONG)
-                    .show();
-            clearForm();
+                    Toast.LENGTH_LONG);
+            toast.addCallback(new Toast.Callback() {
+                @Override
+                public void onToastHidden() {
+                    clearForm();
+                }
+            });
+            toast.show();
         });
 
 
