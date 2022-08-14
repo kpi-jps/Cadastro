@@ -12,7 +12,7 @@ public class FormData {
     private String state;
 
     public FormData(String name, String phone,
-                    String email, String s, boolean choiceEmailList,
+                    String email, boolean choiceEmailList,
                     String gender, String city,
                     String state) {
         this.name = name;

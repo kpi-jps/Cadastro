@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         String gender = (amb.rbFemale.isChecked()) ? "Feminino" : "Masculino";
         return new FormData(
                 amb.etName.getText().toString(),
-                amb.etName.getText().toString(),
                 amb.etPhone.getText().toString(),
                 amb.etEmail.getText().toString(),
                 amb.cbEmail.isChecked(),
